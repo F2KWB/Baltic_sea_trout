@@ -152,25 +152,35 @@ import { motion } from "framer-motion";
 
 export default function Wstep() {
   return (
-    <section id="o-nas" className="py-2 md:py-24 px-2 max-w-7xl mx-auto scroll-mt-24">
-      <div className="flex flex-col md:flex-row items-center gap-3 md:gap-20">
+    <section id="o-nas" className="py-2 px-2 max-w-7xl mx-auto scroll-mt-24">
+      <div className="flex flex-row items-center gap-3">
         
-        <motion.div className="relative w-full md:w-1/2">
-          <div className="relative z-10 rounded-lg overflow-hidden border border-white/10">
-            {/* h-[400px] -> h-[150px] */}
-            <img src="/troc_pion_ja2.jpg" className="w-full h-[150px] md:h-[600px] object-cover" />
+        {/* LEWA: ZDJĘCIE (szerokość 35%) */}
+        <div className="w-[35%] shrink-0">
+          <div className="rounded-lg overflow-hidden border border-white/10 shadow-xl">
+            <img 
+              src="/troc_pion_ja2.jpg" 
+              className="w-full h-24 md:h-[600px] object-cover" 
+              alt="Pasja"
+            />
           </div>
-        </motion.div>
+        </div>
 
-        <div className="w-full md:w-1/2 space-y-1 md:space-y-6">
-          <span className="text-blue-500 uppercase text-[7px] font-bold tracking-tighter">Nasza Misja</span>
-          <h2 className="text-sm md:text-6xl font-black uppercase leading-none text-white">
+        {/* PRAWA: TEKST (szerokość 65%) */}
+        <div className="w-[65%] space-y-0.5">
+          <span className="text-blue-500 uppercase text-[6px] font-bold tracking-widest">Misja</span>
+          <h2 className="text-[12px] md:text-6xl font-black uppercase leading-tight text-white">
             Pasja <span className="text-blue-600">nad brzegiem</span>
           </h2>
-          <p className="text-zinc-400 leading-tight text-[9px] md:text-lg line-clamp-2">
-            Ta strona powstała z głębokiej pasji do wędkarstwa szlachetnego...
+          <p className="text-zinc-500 text-[8px] leading-tight line-clamp-3">
+            Strona powstała z pasji do wędkarstwa szlachetnego. Tworzymy mapę rewirów i bazę noclegową dla praktyków.
           </p>
+          <div className="pt-1 flex items-center gap-2">
+            <div className="w-4 h-[1px] bg-blue-600"></div>
+            <p className="text-[8px] font-serif italic text-white">A. Kowalski</p>
+          </div>
         </div>
+
       </div>
     </section>
   );
