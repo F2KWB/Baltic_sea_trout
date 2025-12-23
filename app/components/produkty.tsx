@@ -8,7 +8,7 @@ export default function Produkty() {
   const dane = [
     { id: 1, tytul: "Woblery Rękodzielnicze", kategoria: "Przynęty", opisKrotki: "Unikatowe przynęty na troć.", opisDlugi: "Nasze woblery są ręcznie strugane z drewna lipowego i testowane w pomorskich rzekach.", img: "/przyneta.jpg", kolor: "bg-blue-950" },
     { id: 2, tytul: "Zestawy Muchowe", kategoria: "Sprzęt", opisKrotki: "Kompletne zestawy do połowu.", opisDlugi: "Dobieramy sprzęt pod konkretne rzeki. W zestawie wędka, kołowrotek oraz linka.", img: "/przyneta.jpg", kolor: "bg-zinc-900" },
-    { id: 3, tytul: "Odzież Techniczna", kategoria: "Odzież", opisKrotki: "Komfort w każdych warunkach.", opisDlugi: "Wodoodporne kurtki i spodniobuty, które pozwolą Ci skupić się na łowieniu.", img: "/przyneta.jpg", kolor: "bg-blue-900" }
+    { id: 3, tytul: "Odzież Techniczna", kategoria: "Odzież", opisKrotki: "Komfort w każdych warunkach.", opisDlugi: "Wodo kurtki i spodniobuty, które pozwolą Ci skupić się na łowieniu.", img: "/przyneta.jpg", kolor: "bg-blue-900" }
   ];
 
   return (
