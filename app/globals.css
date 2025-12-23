@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ /* animacja pinezki */
+ @keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15); /* Powiększenie o 15% */
+  }
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+html {
+  /* Zapewnia płynne przesuwanie zamiast nagłego skoku */
+  scroll-behavior: smooth;
+}
+
+/* Dodaje margines nad sekcją, do której linkujemy, 
+   żeby menu jej nie zasłaniało */
+[id] {
+  scroll-margin-top: 100px; /* Dopasuj tę wartość do wysokości Twojego menu */
+}
+
+#miejscowki-info, #noclegi-info {
+  scroll-margin-top: 100px;
 }
