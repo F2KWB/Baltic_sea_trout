@@ -51,20 +51,17 @@ export default function Noclegi() {
             <p className="text-zinc-500 mt-4">Sprawdzone miejsca przyjazne wędkarzom.</p>
           </motion.div>
 
-          {/* Filtry */}
-          <div className="flex gap-2 bg-zinc-900 p-1 rounded-full border border-white/5">
-            {["Wszystkie", "Nad rzeką", "Nad morzem"].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full text-xs font-bold uppercase transition-all ${
-                  filter === cat ? "bg-blue-600 text-white" : "text-zinc-500 hover:text-white"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+         {/* Kontener przycisków filtrowania */}
+<div className="flex flex-wrap md:flex-nowrap gap-2 mb-8 px-4 md:px-0 w-full">
+  {['Wszystkie', 'Nad rzeką', 'Nad morzem'].map((filter) => (
+    <button
+      key={filter}
+      className="flex-1 md:flex-none px-4 py-3 bg-zinc-900 border border-white/10 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+    >
+      {filter}
+    </button>
+  ))}
+</div>
         </div>
 
         {/* SIATKA NOCLEGÓW */}
