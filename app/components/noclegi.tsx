@@ -72,72 +72,65 @@ export default function Noclegi() {
           </div>
         </div>
 
-        {/* SIATKA NOCLEGÓW */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-2">
-          <AnimatePresence mode="popLayout">
-            {filtrowaneMiejsca.map((miejsce) => (
-              <motion.div
-                key={miejsce.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                className="group relative bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-white/10"
-              >
-                {/* ZDJĘCIE */}
-                <div className="h-64 overflow-hidden relative">
-                  <img 
-                    src={miejsce.img} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                    alt={miejsce.nazwa}
-                  />
-                  <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest">
-                    {miejsce.kategoria}
-                  </div>
-                </div>
-
-                {/* TREŚĆ - POPRAWIONY PADDING */}
-                <div className="p-8 md:p-10">
-                  <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
-                    <div>
-                      <h3 className="text-2xl font-black uppercase tracking-tight">{miejsce.nazwa}</h3>
-                      <div className="flex items-center gap-1 text-blue-500 mt-2">
-                        <MapPin size={14} />
-                        <span className="text-xs font-bold uppercase tracking-wide">{miejsce.lokalizacja}</span>
-                      </div>
-                    </div>
-                    <div className="bg-white/5 p-3 rounded-2xl border border-white/5 min-w-[120px]">
-                      <p className="text-[10px] text-zinc-500 uppercase font-black tracking-widest mb-1">Cena</p>
-                      <p className="text-lg font-black text-white leading-none">{miejsce.cena}</p>
-                    </div>
-                  </div>
-
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-8">
-                    {miejsce.opis}
-                  </p>
-
-                  {/* UDOGODNIENIA */}
-                  <div className="flex flex-wrap gap-2 pt-6 border-t border-white/5">
-                    {miejsce.tagi.map(tag => (
-                      <span key={tag} className="text-[9px] bg-white/5 px-3 py-1.5 rounded-lg text-zinc-400 font-bold uppercase tracking-wider border border-white/5">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* NAKŁADKA PO NAJECHANIU */}
-                <div className="absolute inset-0 bg-blue-600/95 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm p-8 text-center">
-                  <h4 className="text-3xl font-black uppercase mb-6 text-white leading-tight">Gotowy na<br/>wyprawę?</h4>
-                  <button className="px-10 py-5 bg-white text-black font-black uppercase text-xs rounded-full hover:scale-105 active:scale-95 transition-all shadow-2xl">
-                    Sprawdź dostępność
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+{/* SIATKA NOCLEGÓW - Zmniejszono gap z 10 na 6 na mobile */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 px-2">
+  <AnimatePresence mode="popLayout">
+    {filtrowaneMiejsca.map((miejsce) => (
+      <motion.div
+        key={miejsce.id}
+        layout
+        // ... Twoje animacje bez zmian
+        className="group relative bg-zinc-900 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10"
+      >
+        {/* ZDJĘCIE - Zmieniono h-64 na h-48 na mobile */}
+        <div className="h-48 md:h-64 overflow-hidden relative">
+          <img 
+            src={miejsce.img} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+            alt={miejsce.nazwa}
+          />
+          <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold uppercase tracking-widest">
+            {miejsce.kategoria}
+          </div>
         </div>
+
+        {/* TREŚĆ - Zmieniono p-8 na p-5 na mobile */}
+        <div className="p-5 md:p-10">
+          <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+            <div>
+              {/* Zmniejszono text-2xl na text-xl na mobile */}
+              <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight leading-tight">{miejsce.nazwa}</h3>
+              <div className="flex items-center gap-1 text-blue-500 mt-1">
+                <MapPin size={12} />
+                <span className="text-[10px] md:text-xs font-bold uppercase">{miejsce.lokalizacja}</span>
+              </div>
+            </div>
+            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 sm:gap-0">
+              <p className="text-[9px] text-zinc-500 uppercase font-black tracking-tighter">Cena</p>
+              <p className="text-base md:text-lg font-black text-white">{miejsce.cena}</p>
+            </div>
+          </div>
+
+          {/* Skrócono margines mb-6 na mb-4 i zmniejszono text na xs */}
+          <p className="text-zinc-400 text-xs md:text-sm leading-relaxed mb-4 line-clamp-2 md:line-clamp-none">
+            {miejsce.opis}
+          </p>
+
+          {/* UDOGODNIENIA - mniejszy padding pt-4 */}
+          <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            {miejsce.tagi.map(tag => (
+              <span key={tag} className="text-[8px] md:text-[10px] bg-white/5 px-2 py-1 rounded-md text-zinc-400 uppercase font-medium">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        
+        {/* ... Nakładka po najechaniu bez zmian */}
+      </motion.div>
+    ))}
+  </AnimatePresence>
+</div>
       </div>
     </section>
   );
