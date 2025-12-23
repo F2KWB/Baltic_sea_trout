@@ -31,13 +31,15 @@ export default function ZajawkaNoclegi() {
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent pointer-events-none" />
 
           {/* TREŚĆ (Pozycjonowana identycznie jak w Miejscówkach) */}
-          <div className="absolute inset-0 z-20 p-8 md:p-16 flex flex-col justify-end items-start">
+{/* TREŚĆ - Zmieniony padding na p-6 dla małych ekranów */}
+          <div className="absolute inset-0 z-20 p-6 md:p-16 flex flex-col justify-end items-start">
             <div className="flex items-center gap-3 text-blue-500 mb-4">
               <BedDouble size={24} />
               <span className="text-[10px] font-black uppercase tracking-[0.4em]">Baza Wypadowa</span>
             </div>
             
-            <h3 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
+            {/* Nagłówek - dodano text-4xl jako bazowy i mniejszy tracking na mobile */}
+            <h3 className="text-4xl min-[400px]:text-5xl md:text-8xl font-black text-white uppercase tracking-tight min-[400px]:tracking-tighter mb-6 leading-[0.9]">
               Baza<br/><span className="text-blue-600">Noclegowa</span>
             </h3>
             

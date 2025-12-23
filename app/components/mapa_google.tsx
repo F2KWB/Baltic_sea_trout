@@ -72,22 +72,29 @@ export default function MapComponent() {
 
           {locations.map((loc) => (
             <Marker key={loc.id} position={loc.pozycja} icon={customIcon!}>
-              <Popup>
-                <div className="w-[200px] bg-white text-black rounded-xl overflow-hidden">
-                  <img src={loc.img} className="w-full h-24 object-cover" alt={loc.nazwa} />
-                  <div className="p-3">
-                    <h3 className="text-sm font-bold uppercase mb-1">{loc.nazwa}</h3>
-                    <p className="text-zinc-600 text-[10px] leading-tight mb-3">{loc.opis}</p>
-                    <Link 
-                      href={loc.link}
-                      className="flex items-center justify-between w-full py-2 px-3 bg-blue-600 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-colors"
-                    >
-                      <span className="!text-white">Szczegóły</span>
-                      <ArrowRight size={12} className="text-white" />
-                    </Link>
-                  </div>
-                </div>
-              </Popup>
+             <Popup>
+  {/* Zmieniono w-[200px] na min-w-[160px] i dodano responsive width */}
+  <div className="w-[180px] sm:w-[200px] bg-white text-black rounded-xl overflow-hidden">
+    <img src={loc.img} className="w-full h-24 object-cover" alt={loc.nazwa} />
+    <div className="p-3">
+      {/* Dodano break-words dla bezpieczeństwa */}
+      <h3 className="text-sm font-bold uppercase mb-1 break-words leading-tight">
+        {loc.nazwa}
+      </h3>
+      <p className="text-zinc-600 text-[10px] leading-tight mb-3">
+        {loc.opis}
+      </p>
+      {/* Link bez zmian, ale upewnij się, że tekst w środku ma miejsce */}
+      <Link 
+        href={loc.link}
+        className="flex items-center justify-between w-full py-2 px-3 bg-blue-600 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-colors"
+      >
+        <span className="!text-white">Szczegóły</span>
+        <ArrowRight size={12} className="text-white" />
+      </Link>
+    </div>
+  </div>
+</Popup>
             </Marker>
           ))}
         </MapContainer>
