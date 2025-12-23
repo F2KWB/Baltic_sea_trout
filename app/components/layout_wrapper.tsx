@@ -1,5 +1,5 @@
 "use client";
-import Menu from "@/app/components/menu";
+import Menu from "../components/menu";
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   return (

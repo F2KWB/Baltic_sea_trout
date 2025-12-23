@@ -1,5 +1,5 @@
 "use client";
-import Wstep from "@/app/components/wprowadzenie";
+import Wstep from "./components/wprowadzenie";
 import RybaMiesiacaHero from "./components/ryba_miesiaca";
 import ArchiwumOkazow from "./components/ryby";
 import Zajawka_Miejscowki from "./components/zajawka_miejscowka";
