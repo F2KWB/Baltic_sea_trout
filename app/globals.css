@@ -30,8 +30,9 @@ body {
 }
 
 html {
-  /* Zapewnia płynne przesuwanie zamiast nagłego skoku */
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Dodatkowe zabezpieczenie przed "pływaniem" strony na boki */
+  width: 100%;
 }
 
 /* Dodaje margines nad sekcją, do której linkujemy, 
@@ -42,4 +43,12 @@ html {
 
 #miejscowki-info, #noclegi-info {
   scroll-margin-top: 100px;
+}
+@import "tailwindcss";
+
+@theme {
+  /* Wymuszamy konkretny odcień niebieskiego dla blue-600 */
+  --color-blue-600: #2563eb; 
+  /* Możesz tu dodać też inne kolory, jeśli Vercel je "przekłamuje" */
+  --color-orange-500: #f97316;
 }
