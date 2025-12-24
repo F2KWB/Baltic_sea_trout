@@ -16,7 +16,7 @@ export default function Ryby() {
   return (
     <section id="nasze-ryby" className="py-12 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
       <SectionHeader title="Nasze" subtitle="Okazy" color="blue-600" />
-      <div className="grid grid-cols-4 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneRyb.map((ryba) => (
           <Card 
             key={ryba.id} 

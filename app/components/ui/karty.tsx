@@ -37,7 +37,7 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
     <motion.div
       layout
       onClick={onToggle} // Zmieniamy z setIsOpen na onToggle
-      className="group relative h-75 md:h-120 rounded-2xl overflow-hidden border border-white/5 bg-zinc-950/40 backdrop-blur-md cursor-pointer"
+      className="group relative h-30 md:h-60 rounded-2xl overflow-hidden border border-white/5 bg-zinc-950/40 backdrop-blur-md cursor-pointer"
     > 
       
       {/* --- WIDOK PODSTAWOWY (Zawsze widoczny na dnie) --- */}
