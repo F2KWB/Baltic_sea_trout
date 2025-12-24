@@ -10,15 +10,19 @@ body {
   color: var(--foreground);
   margin: 0;
   padding: 0;
-  /* Zapobieganie poziomemu scrollowi */
+  /* Dodaj to, aby zapobiec poziomemu przesuwaniu się strony na telefonie */
   overflow-x: hidden; 
   width: 100%;
 }
 
-/* Animacja pinezki - skrócona dla lepszej wydajności */
-@keyframes breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+ /* animacja pinezki */
+ @keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15); /* Powiększenie o 15% */
+  }
 }
 
 .animate-breathe {
@@ -26,41 +30,16 @@ body {
 }
 
 html {
+  /* Zapewnia płynne przesuwanie zamiast nagłego skoku */
   scroll-behavior: smooth;
 }
 
-/* DYNAMICZNY MARGINES PRZEWIJANIA
-   Dostosowany do nowej wysokości menu:
-   - Na mobile menu ma 60px (+ margines)
-   - Na desktop menu ma 80px (+ margines)
-*/
+/* Dodaje margines nad sekcją, do której linkujemy, 
+   żeby menu jej nie zasłaniało */
 [id] {
-  scroll-margin-top: 70px; /* Dla mobile */
+  scroll-margin-top: 100px; /* Dopasuj tę wartość do wysokości Twojego menu */
 }
 
-@media (min-width: 768px) {
-  [id] {
-    scroll-margin-top: 100px; /* Dla desktop */
-  }
-}
-
-/* Specyficzne poprawki dla sekcji informacyjnych */
 #miejscowki-info, #noclegi-info {
-  scroll-margin-top: 70px;
-}
-
-@media (min-width: 768px) {
-  #miejscowki-info, #noclegi-info {
-    scroll-margin-top: 100px;
-  }
-}
-
-/* Ukrywanie paska przewijania dla poziomych list (np. filtrów), 
-   jeśli będziesz ich używać */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scroll-margin-top: 100px;
 }
