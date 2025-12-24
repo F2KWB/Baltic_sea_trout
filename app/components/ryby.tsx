@@ -19,6 +19,7 @@ export default function Ryby() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneRyb.map((ryba) => (
           <Card 
+          titleColor="text-blue-500"
             key={ryba.id} 
             item={ryba} 
             isOpen={activeId === ryba.id} 

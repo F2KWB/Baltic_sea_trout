@@ -15,10 +15,11 @@ export default function Produkty() {
 
   return (
     <section id="produkty" className="py-4 md:py-6 px-4 md:px-6 max-w-7xl mx-auto">
-      <SectionHeader title="Nasze" subtitle="Produkty" color="blue-500" />
+      <SectionHeader title="Nasze" subtitle="Produkty" color="green-500" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneProduktow.map((item) => (
           <Card 
+          titleColor="text-green-500"
             key={item.id} 
             item={item} 
             isOpen={activeId === item.id} 

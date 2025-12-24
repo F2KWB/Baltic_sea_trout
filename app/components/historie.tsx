@@ -69,6 +69,7 @@ export default function Historie() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneHistorii.map((story) => (
           <Card 
+          titleColor="text-red-600"
             key={story.id} 
             item={story} 
             // Kontrola otwarcia: karta pyta rodzica "czy to ja mam być otwarta?"
