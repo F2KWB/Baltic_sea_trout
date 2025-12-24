@@ -67,7 +67,7 @@ export default function NoclegiMap() {
                 <div className="w-[220px] bg-white text-black rounded-xl overflow-hidden shadow-xl">
                   <div className="relative">
                     <img src={place.img} className="w-full h-28 object-cover" alt={place.nazwa} />
-                    <div className="absolute top-2 right-2 bg-blue-600 text-white text-[9px] font-bold px-2 py-1 rounded-md shadow-lg">
+                    <div className="absolute top-2 right-2 bg-blue-500 text-white text-[9px] font-bold px-2 py-1 rounded-md shadow-lg">
                       {place.cena}
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export default function NoclegiMap() {
 
                     <Link 
                       href={place.link}
-                      className="flex items-center justify-between w-full py-2.5 px-4 bg-blue-600 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-all shadow-md"
+                      className="flex items-center justify-between w-full py-2.5 px-4 bg-blue-500 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-all shadow-md"
                     >
                       <span className="!text-white">Szczegóły obiektu</span>
                       <ArrowRight size={12} className="text-white" />

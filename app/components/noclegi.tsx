@@ -62,7 +62,7 @@ export default function Noclegi() {
                 className={`
                   flex-1 md:flex-none px-4 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all border
                   ${filter === f 
-                    ? "bg-sky-700 border-transparent text-white shadow-lg shadow-blue-600/20" 
+                    ? "bg-blue-500 border-transparent text-white shadow-lg shadow-blue-600/20" 
                     : "bg-zinc-900 border-white/5 text-zinc-500 hover:border-white/20"}
                 `}
               >
@@ -102,7 +102,7 @@ export default function Noclegi() {
                   <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
                     <div>
                       <h3 className="text-2xl font-black uppercase tracking-tight">{miejsce.nazwa}</h3>
-                      <div className="flex items-center gap-1 text-sky-700 mt-2">
+                      <div className="flex items-center gap-1 text-blue-500 mt-2">
                         <MapPin size={14} />
                         <span className="text-xs font-bold uppercase tracking-wide">{miejsce.lokalizacja}</span>
                       </div>
@@ -128,7 +128,7 @@ export default function Noclegi() {
                 </div>
 
                 {/* NAKŁADKA PO NAJECHANIU */}
-                <div className="absolute inset-0 bg-blue-600/95 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm p-8 text-center">
+                <div className="absolute inset-0 bg-blue-500/95 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm p-8 text-center">
                   <h4 className="text-3xl font-black uppercase mb-6 text-white leading-tight">Gotowy na<br/>wyprawę?</h4>
                   <button className="px-10 py-5 bg-white text-black font-black uppercase text-xs rounded-full hover:scale-105 active:scale-95 transition-all shadow-2xl">
                     Sprawdź dostępność

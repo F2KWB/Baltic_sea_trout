@@ -117,7 +117,7 @@ export default function Mapa() {
                     {/* LINK */}
                     <a 
                       href={pin.link}
-                      className="mt-3 md:mt-4 block w-full py-2.5 md:py-3 bg-blue-600 hover:bg-blue-500 text-white text-center text-[9px] md:text-[10px] font-black uppercase rounded-xl transition-all active:scale-95 focus-visible:ring-2 focus-visible:ring-white outline-none tracking-widest"
+                      className="mt-3 md:mt-4 block w-full py-2.5 md:py-3 bg-blue-500 hover:bg-blue-500 text-white text-center text-[9px] md:text-[10px] font-black uppercase rounded-xl transition-all active:scale-95 focus-visible:ring-2 focus-visible:ring-white outline-none tracking-widest"
                     >
                       Odkryj Miejsce
                     </a>

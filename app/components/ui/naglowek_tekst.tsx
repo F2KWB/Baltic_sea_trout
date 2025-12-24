@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 
 // REJESTRACJA KOLORÓW DLA TAILWINDA (Dopisz tu kolory, których używasz w projekcie):
-// bg-blue-600 text-blue-600
+// bg-blue-500 text-blue-500
 // bg-orange-500 text-orange-500
 // bg-red-600 text-red-600
 
