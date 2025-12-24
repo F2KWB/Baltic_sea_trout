@@ -35,7 +35,7 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
       <div className="h-full flex flex-col w-full">
         
         {/* ZDJĘCIE: shrink-0 jest kluczowe! Blokuje zgniatanie zdjęcia przez tekst */}
-        <div className={`h-[66%] w-full overflow-hidden shrink-0`}>
+        <div className={`h-2/3 w-full overflow-hidden shrink-0`}>
           <img 
             src={item.img} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -44,7 +44,7 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
         </div>
 
         {/* TREŚĆ: Musi zajmować dokładnie 34% i ucinać nadmiar tekstu */}
-        <div className="h-[34%] px-3 py-2 flex flex-col justify-center overflow-hidden bg-black/20">
+        <div className="h-1/3 px-3 py-2 flex flex-col justify-center overflow-hidden bg-black/20">
           <span className="text-blue-500 text-[8px] uppercase font-bold tracking-widest leading-none">
             {item.kategoria}
           </span>
