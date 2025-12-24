@@ -3,17 +3,10 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  
-  /* Definiujemy kolory jako standardowe zmienne CSS */
-  --color-blue-600: #2563eb;
-  --color-orange-500: #f97316;
+
 }
 
-@theme {
-  /* Mapujemy zmienne CSS na system Tailwinda */
-  --color-blue-600: var(--color-blue-600);
-  --color-orange-500: var(--color-orange-500);
-}
+
 
 body {
   background: var(--background);

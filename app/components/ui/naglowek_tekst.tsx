@@ -61,7 +61,7 @@ interface Props {
   color?: string; // Tutaj będziemy podawać tylko nazwę koloru, np. "orange-500"
 }
 
-export const SectionHeader = ({ title, subtitle, color = "blue-600" }: Props) => (
+export const SectionHeader = ({ title, subtitle, color }: Props) => (
   <motion.div 
     initial={{ opacity: 0 }} 
     whileInView={{ opacity: 1 }} 
