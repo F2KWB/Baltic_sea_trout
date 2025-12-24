@@ -70,7 +70,7 @@ export default function Home() {
           2. gap-10 md:gap-24 - drastyczne zmniejszenie odstępów między sekcjami na telefonie.
           3. px-2 md:px-6 - węższe marginesy boczne, by odzyskać przestrzeń.
       */}
-      <div className="relative z-10 w-full flex flex-col gap-10 md:gap-24 px-2 md:px-6 pt-[60px] md:pt-[80px]">
+      <div className="relative z-10 w-full flex flex-col gap-1 md:gap-1 px-1 md:px-4 pt-[60px] md:pt-[80px]">
         <Wstep />
         <RybaMiesiacaHero />
         <ArchiwumOkazow />

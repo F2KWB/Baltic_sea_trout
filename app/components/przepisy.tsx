@@ -14,7 +14,7 @@ export default function Przepisy() {
   ];
 
   return (
-    <section id="przepisy" className="py-12 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+    <section id="przepisy" className="py-4 md:py-6 px-4 md:px-6 max-w-7xl mx-auto">
       <SectionHeader title="Nasze" subtitle="Przepisy" color="orange-500" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {danePrzepisow.map((item) => (

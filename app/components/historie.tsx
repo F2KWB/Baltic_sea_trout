@@ -56,7 +56,7 @@ export default function Historie() {
   ];
 
   return (
-    <section id="historie" className="py-12 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+    <section id="historie" className="py-4 md:py-6 px-4 md:px-6 max-w-7xl mx-auto">
       
       {/* Nagłówek z czerwonym akcentem dla klimatu opowieści */}
       <SectionHeader 
