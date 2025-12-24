@@ -70,31 +70,30 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
       <AnimatePresence>
         {/* Warunek: Pokaż tylko jeśli isOpen jest true ORAZ istnieje długi opis */}
         {isOpen && item.opisDlugi && (
-          <motion.div
-            /* Animacja wejścia: y: 100% to dół karty, 0 to pozycja docelowa */
-            initial={{ y: "100%" }} 
-            animate={{ y: 0 }}      
-            exit={{ y: "100%" }}    
-            /* tween: animacja liniowa/płynna, duration: czas w sekundach */
-            transition={{ type: "tween", duration: 0.4 }}
-            /* item.kolor || 'bg-blue-950': jeśli nie podano koloru w danych, użyj ciemnoniebieskiego */
-           // DODANO: overflow-y-auto (pozwala przewijać długi tekst w pionie)
-      className={`absolute inset-0 ${item.kolor || 'bg-blue-950'} p-6 md:p-10 flex flex-col z-20 overflow-y-auto`}
-          >
-            <h3 className="text-xl md:text-3xl font-black uppercase mb-4 leading-none">
-              {item.tytul}
-            </h3>
-            
-{/* OPIS: Zmieniamy na responsywny rozmiar tekstu i usuwamy line-clamp */}
-      <p className="text-zinc-200 text-sm md:text-lg mb-8 font-serif leading-relaxed">
-        {item.opisDlugi}
-            </p>
-
-{/* Przycisk zamknięcia na dole */}
-      <button className="mt-auto text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 w-fit">
-        Zamknij
-            </button>
-          </motion.div>
+<motion.div
+  initial={{ y: "100%" }}
+  animate={{ y: 0 }}
+  exit={{ y: "100%" }}
+  transition={{ type: "tween", duration: 0.4 }}
+  // KLUCZOWE KLASY:
+  // w-full: szerokość dopasowana do karty
+  // break-words: łamanie bardzo długich słów
+  // whitespace-normal: wymusza zawijanie tekstu do nowej linii
+  // overflow-y-auto: tylko przewijanie pionowe, jeśli tekst jest za długi
+  className={`absolute inset-0 ${item.kolor || 'bg-blue-950'} p-6 flex flex-col z-20 w-full whitespace-normal break-words overflow-y-auto overflow-x-hidden`}
+>
+  <h3 className="text-xl font-black uppercase mb-4 leading-tight">
+    {item.tytul}
+  </h3>
+  
+  <p className="text-zinc-200 text-sm md:text-base font-serif leading-relaxed">
+    {item.opisDlugi}
+  </p>
+  
+  <button className="mt-6 text-white text-[10px] uppercase tracking-widest border-b border-white/20 pb-1 w-fit shrink-0">
+    Zamknij
+  </button>
+</motion.div>
         )}
       </AnimatePresence>
     </motion.div>
