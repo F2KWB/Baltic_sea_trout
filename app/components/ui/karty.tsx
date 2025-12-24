@@ -18,11 +18,11 @@ interface CardProps {
   // Wybór proporcji zdjęcia: połowa karty lub 2/3 wysokości
   isOpen: boolean;    // Dodajemy to do interface
   onToggle: () => void; // Dodajemy to do interface
-  aspectRatio?: "h-2/3";
+  aspectRatio?: "h-[66%]";
 }
 
 // Główna funkcja karty. aspectRatio ma ustawioną wartość domyślną "h-1/2"
-export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProps) => {
+export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-[66%]" }: CardProps) => {
   
 //   // useState: "Pamięć" karty. Domyślnie false (zamknięta). 
 //   // Wywołanie setIsOpen zmieni ten stan i odświeży widok.
@@ -40,8 +40,8 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
       className="group relative h-30 md:h-60 rounded-2xl overflow-hidden border border-white/5 bg-zinc-950/40 backdrop-blur-md cursor-pointer"
     > 
       
-      {/* --- WIDOK PODSTAWOWY (Zawsze widoczny na dnie) --- */}
-      <div className="h-full flex flex-col">
+{/* ZDJĘCIE: Wymuszamy 2/3 wysokości (66%) i blokujemy kurczenie */}
+        <div className={`relative w-full h-[66%] shrink-0 overflow-hidden`}>
         
         {/* Kontener zdjęcia z dynamiczną wysokością */}
         <div className={`${aspectRatio} overflow-hidden`}>
@@ -53,14 +53,15 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
         </div>
 
         {/* Treść pod zdjęciem */}
-        <div className="p-5 flex flex-col justify-center grow">
+        <div className="h-[34%] p-5 flex flex-col justify-center grow">
           <span className="text-blue-500 text-[10px] uppercase font-bold tracking-widest">
             {item.kategoria}
           </span>
           <h3 className="text-lg font-bold uppercase mt-1">
             {item.tytul}
           </h3>
-          <p className="text-zinc-400 mt-1 text-xs line-clamp-2 italic">
+{/* Opis krótki ukrywamy na bardzo małych kafelkach (h-30), żeby nie psuł układu */}
+          <p className="hidden md:block text-zinc-400 mt-1 text-xs line-clamp-1 italic">
             {item.opisKrotki}
           </p>
         </div>
