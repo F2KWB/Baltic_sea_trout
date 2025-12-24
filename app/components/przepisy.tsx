@@ -21,6 +21,7 @@ export default function Przepisy() {
           <Card 
             key={item.id} 
             item={item} 
+            titleColor="text-orange-500" // Przesyłamy konkretną klasę
             isOpen={activeId === item.id} 
             onToggle={() => setActiveId(activeId === item.id ? null : item.id)}
             aspectRatio="h-2/3" 

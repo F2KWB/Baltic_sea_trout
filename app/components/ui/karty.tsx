@@ -19,10 +19,11 @@ interface CardProps {
   isOpen: boolean;    // Dodajemy to do interface
   onToggle: () => void; // Dodajemy to do interface
   aspectRatio?: "h-2/3";
+  titleColor?: string;
 }
 
 // Główna funkcja karty. aspectRatio ma ustawioną wartość domyślną "h-1/2"
-export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProps) => {
+export const Card = ({ item, isOpen, onToggle, titleColor = "text-white", aspectRatio = "h-2/3"}: CardProps) => {
   return (
     <motion.div
       layout
@@ -48,7 +49,8 @@ export const Card = ({ item, isOpen, onToggle, aspectRatio = "h-2/3" }: CardProp
           <span className="text-blue-500 text-[8px] uppercase font-bold tracking-widest leading-none">
             {item.kategoria}
           </span>
-          <h3 className="text-[10px] md:text-sm font-bold uppercase mt-0.5 leading-tight line-clamp-1">
+          {/* <h3 className="text-[10px] md:text-sm font-bold uppercase mt-0.5 leading-tight line-clamp-1"> */}
+            <h3 className={`text-xs md:text-lg font-bold uppercase ${titleColor}`}>
             {item.tytul}
           </h3>
           {/* Opis krótki ukrywamy na mobile (h-32), żeby nie psuł proporcji */}
