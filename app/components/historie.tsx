@@ -66,7 +66,7 @@ export default function Historie() {
       />
 
       {/* Siatka historii - 2 kolumny dla większych kart opowieści */}
-      <div className="grid grid-cols-4 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneHistorii.map((story) => (
           <Card 
             key={story.id} 
