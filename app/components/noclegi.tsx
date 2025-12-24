@@ -62,7 +62,7 @@ export default function Noclegi() {
                 className={`
                   flex-1 md:flex-none px-4 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all border
                   ${filter === f 
-                    ? "bg-blue-600 border-transparent text-white shadow-lg shadow-blue-600/20" 
+                    ? "bg-sky-700 border-transparent text-white shadow-lg shadow-blue-600/20" 
                     : "bg-zinc-900 border-white/5 text-zinc-500 hover:border-white/20"}
                 `}
               >
@@ -102,7 +102,7 @@ export default function Noclegi() {
                   <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
                     <div>
                       <h3 className="text-2xl font-black uppercase tracking-tight">{miejsce.nazwa}</h3>
-                      <div className="flex items-center gap-1 text-blue-500 mt-2">
+                      <div className="flex items-center gap-1 text-sky-700 mt-2">
                         <MapPin size={14} />
                         <span className="text-xs font-bold uppercase tracking-wide">{miejsce.lokalizacja}</span>
                       </div>

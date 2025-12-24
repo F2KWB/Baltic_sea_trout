@@ -1,19 +1,10 @@
 @import "tailwindcss";
 
-@theme {
-  /* Nadpisujemy blue-600 klasycznym odcieniem (ciemniejszym niż v4) */
-  --color-blue-600: #1d4ed8; 
-  /* Jeśli blue-500 Ci odpowiadał, możesz go też "zamrozić" */
-  --color-blue-500: #3b82f6;
-}
-
 :root {
   --background: #000000;
   --foreground: #ffffff;
 
 }
-
-
 
 body {
   background: var(--background);
