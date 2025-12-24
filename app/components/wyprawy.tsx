@@ -42,7 +42,7 @@ export default function Wyprawy() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6">
-            Profesjonalne <br /><span className="text-blue-600">Wyprawy</span>
+            Profesjonalne <br /><span className="text-sky-700">Wyprawy</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-lg italic font-serif">
             "Nie sprzedajemy tylko czasu nad wodą. Sprzedajemy lata doświadczeń, 
@@ -83,7 +83,7 @@ export default function Wyprawy() {
                 <ul className="space-y-2 mb-6">
                   {oferta.cechy.map((cecha) => (
                     <li key={cecha} className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-white/80">
-                      <CheckCircle2 size={12} className="text-blue-500" />
+                      <CheckCircle2 size={12} className="text-sky-700" />
                       {cecha}
                     </li>
                   ))}

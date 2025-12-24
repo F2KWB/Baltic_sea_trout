@@ -29,8 +29,8 @@ export default function Wstep() {
             />
           </div>
           {/* Zmniejszono ozdobne narożniki na mobile */}
-          <div className="absolute -top-2 -left-2 w-12 h-12 border-t border-l border-blue-600 z-0"></div>
-          <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b border-r border-blue-600 z-0"></div>
+          <div className="absolute -top-2 -left-2 w-12 h-12 border-t border-l border-sky-700 z-0"></div>
+          <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b border-r border-sky-700 z-0"></div>
         </motion.div>
 
         {/* PRAWA STRONA: TEKST - Zredukowane space-y-6 na space-y-4 */}
@@ -42,7 +42,7 @@ export default function Wstep() {
           className="w-full md:w-1/2 space-y-3 md:space-y-6"
         >
           <div className="inline-block border border-blue-600/50 px-3 py-0.5 rounded-full">
-            <span className="text-blue-600 uppercase tracking-widest text-[8px] md:text-[10px] font-bold">
+            <span className="text-sky-700 uppercase tracking-widest text-[8px] md:text-[10px] font-bold">
               Nasza Misja
             </span>
           </div>
@@ -50,7 +50,7 @@ export default function Wstep() {
           {/* Nagłówek: text-4xl -> text-2xl */}
           <h2 className="text-2xl md:text-6xl font-black uppercase tracking-tighter leading-tight text-white">
             Pasja wykuta <br /> 
-            <span className="text-blue-600">nad brzegiem rzeki</span>
+            <span className="text-sky-700">nad brzegiem rzeki</span>
           </h2>
           
           {/* Tekst: text-lg -> text-xs/sm */}
@@ -66,7 +66,7 @@ export default function Wstep() {
           {/* Podpis - skondensowany padding pt-6 -> pt-4 */}
           <div className="pt-4 border-t border-white/10 text-white">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-[1px] bg-blue-600"></div>
+              <div className="w-8 h-[1px] bg-sky-700"></div>
               <p className="font-serif italic text-base md:text-xl leading-none">Adam Kowalski</p>
             </div>
           </div>
