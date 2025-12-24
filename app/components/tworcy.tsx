@@ -32,7 +32,7 @@ export default function MorscyTworcy() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">
-            Morscy <span className="text-blue-500">Twórcy</span>
+            Morscy <span className="text-blue-600">Twórcy</span>
           </h2>
           <p className="text-zinc-400 mt-4 max-w-xl mx-auto">
             Ludzie, którzy dzielą się pasją, wiedzą i tworzą unikalne rzeczy dla naszej społeczności.
@@ -54,7 +54,7 @@ export default function MorscyTworcy() {
               {/* ZDJĘCIE TWÓRCY */}
               <div className="relative shrink-0">
                 {/* Zmniejszono nieco wymiary na średnich ekranach, by nie wypychały tekstu */}
-                <div className="w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-blue-600/20 group-hover:border-blue-500 transition-colors">
+                <div className="w-32 h-32 md:w-40 md:h-40 xl:w-48 xl:h-48 rounded-full overflow-hidden border-2 border-blue-600/20 group-hover:border-blue-600 transition-colors">
                   <img 
                     src={tworca.img} 
                     alt={tworca.imie} 
@@ -67,7 +67,7 @@ export default function MorscyTworcy() {
               {/* OPIS I LINKI */}
               {/* ZMIANA: xl:text-left - tekst centruje się, gdy zdjęcie jest na górze */}
               <div className="flex flex-col text-center xl:text-left flex-1 min-w-0">
-                <span className="text-blue-500 text-xs font-bold uppercase tracking-widest mb-2">
+                <span className="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">
                   {tworca.rola}
                 </span>
                 <h3 className="text-xl md:text-2xl xl:text-3xl font-bold text-white mb-3 truncate-none">
