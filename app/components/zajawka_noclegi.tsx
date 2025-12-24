@@ -40,7 +40,7 @@ export default function ZajawkaNoclegi() {
             
             {/* Nagłówek - dodano text-4xl jako bazowy i mniejszy tracking na mobile */}
             <h3 className="text-4xl min-[400px]:text-5xl md:text-8xl font-black text-white uppercase tracking-tight min-[400px]:tracking-tighter mb-6 leading-[0.9]">
-              Baza<br/><span className="text-blue-600">Noclegowa</span>
+              Baza<br/><span className="text-blue-500">Noclegowa</span>
             </h3>
             
             <p className="text-zinc-400 text-sm md:text-lg leading-relaxed mb-10 max-w-xl">
@@ -48,7 +48,7 @@ export default function ZajawkaNoclegi() {
             </p>
 
             <Link href="/noclegi" className="inline-flex items-center gap-4 group/btn">
-              <div className="px-10 py-5 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest transition-all group-hover/btn:bg-blue-600 group-hover/btn:text-white shadow-xl">
+              <div className="px-10 py-5 bg-white text-black rounded-full text-xs font-black uppercase tracking-widest transition-all group-hover/btn:bg-blue-500 group-hover/btn:text-white shadow-xl">
                 Otwórz Mapę Noclegów
               </div>
               <div className="w-14 h-14 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/10 text-white group-hover/btn:bg-white group-hover/btn:text-black transition-all">

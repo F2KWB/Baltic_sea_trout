@@ -31,7 +31,7 @@ export default function ZajawkaMiejscowki() {
             </div>
             
             <h3 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
-              Mapa<br/><span className="text-blue-600">Łowisk</span>
+              Mapa<br/><span className="text-blue-500">Łowisk</span>
             </h3>
             
             <p className="text-zinc-400 text-sm md:text-lg leading-relaxed mb-10 max-w-xl">
@@ -39,7 +39,7 @@ export default function ZajawkaMiejscowki() {
             </p>
 
             <Link href="/miejscowki" className="inline-flex items-center gap-4 group/btn">
-              <div className="px-10 py-5 bg-blue-600 rounded-full text-white text-xs font-black uppercase tracking-widest transition-all group-hover/btn:bg-blue-500 shadow-xl">
+              <div className="px-10 py-5 bg-blue-500 rounded-full text-white text-xs font-black uppercase tracking-widest transition-all group-hover/btn:bg-blue-500 shadow-xl">
                 Otwórz Pełną Mapę
               </div>
               <div className="w-14 h-14 flex items-center justify-center bg-white/10 backdrop-blur-md rounded-full border border-white/10 text-white group-hover/btn:bg-white group-hover/btn:text-black transition-all">
