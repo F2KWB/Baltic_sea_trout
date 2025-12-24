@@ -46,11 +46,10 @@ export const Card = ({ item, isOpen, onToggle, titleColor = "text-white", aspect
 
         {/* TREŚĆ: Musi zajmować dokładnie 34% i ucinać nadmiar tekstu */}
         <div className="h-1/3 px-3 py-2 flex flex-col justify-center overflow-hidden bg-black/20">
-          <span className="text-blue-500 text-[8px] uppercase font-bold tracking-widest leading-none">
+          <span className="${titleColor} text-[8px] uppercase font-bold tracking-widest leading-none">
             {item.kategoria}
           </span>
-          {/* <h3 className="text-[10px] md:text-sm font-bold uppercase mt-0.5 leading-tight line-clamp-1"> */}
-            <h3 className={`text-xs md:text-lg font-bold uppercase ${titleColor}`}>
+          <h3 className="text-[10px] md:text-sm font-bold uppercase mt-0.5 leading-tight line-clamp-1">
             {item.tytul}
           </h3>
           {/* Opis krótki ukrywamy na mobile (h-32), żeby nie psuł proporcji */}
