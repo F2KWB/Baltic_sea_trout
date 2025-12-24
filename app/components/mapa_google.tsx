@@ -87,7 +87,7 @@ export default function MapComponent() {
       {/* Link bez zmian, ale upewnij się, że tekst w środku ma miejsce */}
       <Link 
         href={loc.link}
-        className="flex items-center justify-between w-full py-2 px-3 bg-blue-600 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-colors"
+        className="flex items-center justify-between w-full py-2 px-3 bg-blue-900 !text-white text-[9px] font-black uppercase rounded-lg hover:bg-blue-500 transition-colors"
       >
         <span className="!text-white">Szczegóły</span>
         <ArrowRight size={12} className="text-white" />
