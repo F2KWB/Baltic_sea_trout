@@ -1,13 +1,10 @@
-
+// KLASY DO REJESTRACJI DLA VERCEL:
+// border-red-500 border-red-600 border-orange-500 border-blue-500
 
 "use client";
 import { motion } from "framer-motion";
 
-// REJESTRACJA KOLORÓW DLA TAILWINDA (Dopisz tu kolory, których używasz w projekcie):
-// bg-blue-500 text-blue-500
-// bg-orange-500 text-orange-500
-// bg-red-600 text-red-600
-// bg-green-500 text-green-500
+
 
 interface Props {
   title: string;

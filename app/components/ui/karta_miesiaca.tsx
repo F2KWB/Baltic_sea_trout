@@ -1,3 +1,6 @@
+// KLASY DO REJESTRACJI DLA VERCEL:
+// border-red-500 border-red-600 border-orange-500 border-blue-500
+
 "use client";
 import { motion } from "framer-motion";
 
@@ -13,8 +16,7 @@ interface HeroProps {
   przyciskTekst?: string;   // Opcjonalny tekst przycisku
 }
 
-// KLASY DO REJESTRACJI DLA VERCEL:
-// border-red-500 border-red-600 border-orange-500 border-blue-500
+
 
 export default function HeroSekcjaMiesiaca({
   id,
