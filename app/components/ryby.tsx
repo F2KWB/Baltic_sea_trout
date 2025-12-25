@@ -15,11 +15,11 @@ export default function Ryby() {
 
   return (
     <section id="nasze-ryby" className="py-4 md:py-6 px-4 md:px-6 max-w-7xl mx-auto">
-      <SectionHeader title="Nasze" subtitle="Okazy" color="blue-500" />
+      <SectionHeader title="Nasze" subtitle="Okazy" color="blue-600" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {daneRyb.map((ryba) => (
           <Card 
-          titleColor="text-blue-500"
+          titleColor="text-blue-600"
             key={ryba.id} 
             item={ryba} 
             isOpen={activeId === ryba.id} 

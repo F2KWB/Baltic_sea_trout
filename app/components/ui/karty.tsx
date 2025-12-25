@@ -1,4 +1,9 @@
-
+// 1. Zdefiniuj mapę kolorów (wyjdź poza dynamiczne stringi)
+const colorMap = {
+  "red-600": { border: "border-red-600", stroke: "#dc2626" },
+  "orange-500": { border: "border-orange-500", stroke: "#f97316" },
+  "blue-600": { border: "border-blue-600", stroke: "#2563eb" },
+};
 // AnimatePresence pozwala animować elementy, które znikałyby natychmiastowo z ekranu (np. przy zamykaniu)
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";

@@ -15,13 +15,13 @@ export default function Przepisy() {
 
   return (
     <section id="przepisy" className="py-4 md:py-6 px-4 md:px-6 max-w-7xl mx-auto">
-      <SectionHeader title="Nasze" subtitle="Przepisy" color="orange-500" />
+      <SectionHeader title="Nasze" subtitle="Przepisy" color="orange-600" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {danePrzepisow.map((item) => (
           <Card 
             key={item.id} 
             item={item} 
-            titleColor="text-orange-500" // Przesyłamy konkretną klasę
+            titleColor="text-orange-600" // Przesyłamy konkretną klasę
             isOpen={activeId === item.id} 
             onToggle={() => setActiveId(activeId === item.id ? null : item.id)}
             aspectRatio="h-2/3" 

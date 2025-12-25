@@ -46,9 +46,9 @@ export default function Noclegi() {
             className="px-2" // Dodatkowy padding, żeby tekst nie dotykał krawędzi
           >
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-              Baza <span className="text-blue-500">Noclegowa</span>
+              Baza <span className="text-blue-600">Noclegowa</span>
             </h2>
-            <p className="text-zinc-500 mt-4 text-sm md:text-base max-w-xl">
+            <p className="text-zinc-600 mt-4 text-sm md:text-base max-w-xl">
               Sprawdzone miejsca przyjazne wędkarzom. Blisko wody i z klimatem.
             </p>
           </motion.div>
@@ -62,8 +62,8 @@ export default function Noclegi() {
                 className={`
                   flex-1 md:flex-none px-4 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all border
                   ${filter === f 
-                    ? "bg-blue-500 border-transparent text-white shadow-lg shadow-blue-600/20" 
-                    : "bg-zinc-900 border-white/5 text-zinc-500 hover:border-white/20"}
+                    ? "bg-blue-600 border-transparent text-white shadow-lg shadow-blue-600/20" 
+                    : "bg-zinc-900 border-white/5 text-zinc-600 hover:border-white/20"}
                 `}
               >
                 {f}

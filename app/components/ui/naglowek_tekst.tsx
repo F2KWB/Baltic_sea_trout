@@ -1,5 +1,14 @@
 
+
 "use client";
+
+// 1. Zdefiniuj mapę kolorów (wyjdź poza dynamiczne stringi)
+const colorMap = {
+  "red-600": { border: "border-red-600", stroke: "#dc2626" },
+  "orange-500": { border: "border-orange-500", stroke: "#f97316" },
+  "blue-600": { border: "border-blue-600", stroke: "#2563eb" },
+};
+
 import { motion } from "framer-motion";
 
 

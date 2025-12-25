@@ -9,7 +9,7 @@ export default function HistoriaMiesiaca() {
       tytulPochylony="Parsęty"
       opis="Zegar wskazywał trzecią rano, gdy mgła nad wodą zgęstniała tak bardzo..."
       imgSrc="/klif.jpg"
-      akcentKolor="red-500"
+      akcentKolor="red-600"
       przyciskTekst="Czytaj całą historię"
     />
   );

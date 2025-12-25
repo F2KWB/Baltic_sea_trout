@@ -1,17 +1,8 @@
 @import "tailwindcss";
 
-/* WYMUSZAMY JASNE TŁO NIEZALEŻNIE OD SYSTEMU */
 :root {
-  --background: #FDFDFC; /* Nasz przyjazny odcień */
-  --foreground: #18181b; /* Ciemny tekst */
-}
-
-/* Usuwamy jakiekolwiek zapytania @media (prefers-color-scheme: dark) jeśli tam są! */
-
-body {
-  background-color: var(--background) !important;
-  color: var(--foreground) !important;
-  min-height: 100vh;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 html, body {
@@ -39,7 +30,3 @@ html, body {
   scroll-margin-top: 100px;
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}

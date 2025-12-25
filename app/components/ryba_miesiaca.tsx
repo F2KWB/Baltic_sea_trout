@@ -9,7 +9,7 @@ export default function RybaMiesiaca() {
       tytulPochylony="Troć"
       opis="Srebrna torpeda, która w tym roku pobiła wszelkie rekordy na pomorskich rzekach."
       imgSrc="/ryba.jpg"
-      akcentKolor="blue-500"
+      akcentKolor="blue-600"
       przyciskTekst="Zobacz okaz"
     />
   );
