@@ -17,7 +17,7 @@ export default function ZajawkaNoclegi() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true }} 
           className="group relative h-[500px] md:h-[600px] rounded-[3rem] overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl"
         >
           {/* TŁO: MAPA GOOGLE NA CAŁOŚCI */}
