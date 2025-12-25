@@ -1,7 +1,3 @@
-// KLASY DO REJESTRACJI DLA VERCEL:
-// border-red-500 border-red-500 border-orange-500 border-blue-500
-
-// components/ui/Card.tsx
 
 // AnimatePresence pozwala animować elementy, które znikałyby natychmiastowo z ekranu (np. przy zamykaniu)
 import { motion, AnimatePresence } from "framer-motion";
