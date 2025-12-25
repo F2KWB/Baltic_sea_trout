@@ -1,47 +1,45 @@
 @import "tailwindcss";
 
+@theme {
+  /* REJESTRACJA KOLORÓW - To gwarantuje identyczny odcień wszędzie */
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-orange-500: #f97316;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  
+  /* Kolory tła dla rozwiniętych kart */
+  --color-red-950: #450a0a;
+  --color-orange-900: #7c2d12;
+  --color-slate-900: #0f172a;
+}
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
-
 }
 
-body {
+html, body {
   background: var(--background);
   color: var(--foreground);
   margin: 0;
   padding: 0;
-  /* Dodaj to, aby zapobiec poziomemu przesuwaniu się strony na telefonie */
   overflow-x: hidden; 
   width: 100%;
+  scroll-behavior: smooth;
 }
 
- /* animacja pinezki */
- @keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15); /* Powiększenie o 15% */
-  }
+/* Animacja pinezki */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 
 .animate-breathe {
   animation: breathe 3s ease-in-out infinite;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden; /* Dodatkowe zabezpieczenie przed "pływaniem" strony na boki */
-  width: 100%;
-}
-
-/* Dodaje margines nad sekcją, do której linkujemy, 
-   żeby menu jej nie zasłaniało */
+/* Margines dla linków kotwicznych */
 [id] {
-  scroll-margin-top: 100px; /* Dopasuj tę wartość do wysokości Twojego menu */
-}
-
-#miejscowki-info, #noclegi-info {
   scroll-margin-top: 100px;
 }
