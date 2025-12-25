@@ -1,5 +1,5 @@
 // KLASY DO REJESTRACJI DLA VERCEL:
-// border-red-500 border-red-600 border-orange-500 border-blue-500
+// border-red-500 border-red-500 border-orange-500 border-blue-500
 
 "use client";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 interface Props {
   title: string;
   subtitle: string;
-  color?: string; // Tutaj będziemy podawać tylko nazwę koloru, np. "orange-500"
+  color?: string; // Tutaj będziemy podawać tylko nazwę koloru
 }
 
 export const SectionHeader = ({ title, subtitle, color }: Props) => (

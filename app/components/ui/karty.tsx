@@ -1,5 +1,5 @@
 // KLASY DO REJESTRACJI DLA VERCEL:
-// border-red-500 border-red-600 border-orange-500 border-blue-500
+// border-red-500 border-red-500 border-orange-500 border-blue-500
 
 // components/ui/Card.tsx
 
