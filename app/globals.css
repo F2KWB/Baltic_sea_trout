@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
-
-
+/* WYMUSZAMY JASNE TŁO NIEZALEŻNIE OD SYSTEMU */
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
+  --background: #FDFDFC; /* Nasz przyjazny odcień */
+  --foreground: #18181b; /* Ciemny tekst */
+}
+
+/* Usuwamy jakiekolwiek zapytania @media (prefers-color-scheme: dark) jeśli tam są! */
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  min-height: 100vh;
 }
 
 html, body {
